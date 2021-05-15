@@ -1,0 +1,6 @@
+D:\Games\моди\Visual\Projects\LabsOOP\TourismClub\Travel\obj\Debug\Travel.csprojAssemblyReference.cache
+D:\Games\моди\Visual\Projects\LabsOOP\TourismClub\Travel\obj\Debug\Travel.csproj.CoreCompileInputs.cache
+D:\Games\моди\Visual\Projects\LabsOOP\TourismClub\Travel\bin\Debug\Travel.dll
+D:\Games\моди\Visual\Projects\LabsOOP\TourismClub\Travel\bin\Debug\Travel.pdb
+D:\Games\моди\Visual\Projects\LabsOOP\TourismClub\Travel\obj\Debug\Travel.dll
+D:\Games\моди\Visual\Projects\LabsOOP\TourismClub\Travel\obj\Debug\Travel.pdb

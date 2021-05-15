@@ -1,0 +1,10 @@
+D:\Games\моди\Visual\Projects\LabsOOP\TourismClub\TourismClub\obj\Debug\TourismClub.csprojAssemblyReference.cache
+D:\Games\моди\Visual\Projects\LabsOOP\TourismClub\TourismClub\obj\Debug\TourismClub.csproj.CoreCompileInputs.cache
+D:\Games\моди\Visual\Projects\LabsOOP\TourismClub\TourismClub\bin\Debug\TourismClub.exe.config
+D:\Games\моди\Visual\Projects\LabsOOP\TourismClub\TourismClub\bin\Debug\TourismClub.exe
+D:\Games\моди\Visual\Projects\LabsOOP\TourismClub\TourismClub\bin\Debug\TourismClub.pdb
+D:\Games\моди\Visual\Projects\LabsOOP\TourismClub\TourismClub\bin\Debug\Travel.dll
+D:\Games\моди\Visual\Projects\LabsOOP\TourismClub\TourismClub\bin\Debug\Travel.pdb
+D:\Games\моди\Visual\Projects\LabsOOP\TourismClub\TourismClub\obj\Debug\TourismClub.csproj.CopyComplete
+D:\Games\моди\Visual\Projects\LabsOOP\TourismClub\TourismClub\obj\Debug\TourismClub.exe
+D:\Games\моди\Visual\Projects\LabsOOP\TourismClub\TourismClub\obj\Debug\TourismClub.pdb
