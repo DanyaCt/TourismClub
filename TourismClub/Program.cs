@@ -10,52 +10,42 @@ namespace TourismClub
         {
             Console.OutputEncoding = System.Text.Encoding.Default;
             Console.InputEncoding = System.Text.Encoding.Default;
-            bool flag = true;
-            int choice;
+            bool flag = true;                                           //variable for the menu loop to work
+            int choice;                                                 //variable to record what the user enters
             List<Сountry> ListOfTravels = new List<Сountry>();
             Console.WriteLine("Вітаємо в клубі любителів туризму!");
             menu();
             List<string> countries = new List<string>() { "Єгипет", "США", "Мексика", "Велика Британія", "ОАЕ" };
             List<string> subjects = new List<string>() { "Природа", "Розваги", "Музеї", "Екскурсія" };
             List<string> agencies = new List<string>() { "Поїхали з нами!", "Ukraine Travel", "TOURS&TICKETS", "TUI-турагентство" };
-            while (flag)                                        //цикл меню
+            while (flag)
             {
                 try
                 {
-                              //введення числа, щоб розуміти що робити далі
                     if (!Int32.TryParse(Console.ReadLine(), out choice))
                     {
                         throw new ArgumentException("Введено неправильні дані");
                     }
-                    if (choice == 0)                                //іф для виходу з циклу
+                    if (choice == 0)                                //condition for exiting the cycle
                     {
                         flag = false;
                     }
-                    else if (choice == 1)                                //іф для заміни існуючого студента
+                    else if (choice == 1)                                //condition for displaying the list of countries
                     {
-                        for (int i = 0; i < countries.Count; i++)
-                        {
-                            Console.WriteLine((i + 1) + " - " + countries[i]);
-                        }
+                        ShowCountries(countries);
                         Console.WriteLine("Виберіть наступну дію: ");
                     }
-                    else if (choice == 2)                                //іф для добавлення нового студента
+                    else if (choice == 2)                                //condition for displaying a list of agencies
                     {
-                        for (int i = 0; i < subjects.Count; i++)
-                        {
-                            Console.WriteLine((i + 1) + " - " + subjects[i]);
-                        }
+                        ShowSubjects(subjects);
                         Console.WriteLine("Виберіть наступну дію: ");
                     }
-                    else if (choice == 3)                                //іф для добавлення нового студента
+                    else if (choice == 3)                                //condition for displaying a list of subjects
                     {
-                        for (int i = 0; i < agencies.Count; i++)
-                        {
-                            Console.WriteLine((i + 1) + " - " + agencies[i]);
-                        }
+                        ShowAgencies(agencies);
                         Console.WriteLine("Виберіть наступну дію: ");
                     }
-                    else if (choice == 4)                                //іф для виведення списку студентів
+                    else if (choice == 4)                                //condition for planning a trip
                     {
                         Console.WriteLine("Якщо передумали планувати поїздку натисніть '0'");
                         Console.WriteLine("Оберіть країну для поїздки: ");
@@ -150,12 +140,12 @@ namespace TourismClub
                         Console.WriteLine("Подорож запланована!");
                         Console.WriteLine("Виберіть наступну дію: ");
                     }
-                    else if (choice == 5)                                //іф для добавлення нового студента
+                    else if (choice == 5)                                //condition for displaying the list of planned trips
                     {
                         ShowListOfTravels(ListOfTravels);
                         Console.WriteLine("Виберіть наступну дію: ");
                     }
-                    else if (choice == 6)                                //іф для добавлення нового студента
+                    else if (choice == 6)                                //condition for deleting the planned trip
                     {
                         if (ListOfTravels.Count != 0)
                         {
@@ -178,7 +168,7 @@ namespace TourismClub
                         }
                         Console.WriteLine("Виберіть наступну дію: ");
                     }
-                    else if (choice == 7)                                //іф для добавлення нового студента
+                    else if (choice == 7)                                //condition for giving the country, agency, subject
                     {
                         Console.WriteLine("Якщо не бажаєте додавати щось, натисніть '0'");
                         Console.WriteLine("Введіть нову країну: ");
@@ -202,7 +192,7 @@ namespace TourismClub
                             agencies.Add(newagency);
                         Console.WriteLine("Виберіть наступну дію: ");
                     }
-                    else if (choice == 8)                                //іф для добавлення нового студента
+                    else if (choice == 8)                                //condition for showing the menu
                     {
                         Console.Clear();
                         menu();
@@ -227,8 +217,8 @@ namespace TourismClub
             Console.WriteLine("Виберіть дію:");
             Console.WriteLine("0 - вийти з програми");
             Console.WriteLine("1 - переглянути країни для відвідання");
-            Console.WriteLine("2 - переглянути турагенції");
-            Console.WriteLine("3 - переглянути тематики поїздок");
+            Console.WriteLine("2 - переглянути тематики поїздок");
+            Console.WriteLine("3 - переглянути турагенції");
             Console.WriteLine("4 - запланувати поїздку");
             Console.WriteLine("5 - переглянути заплановані поїздки");
             Console.WriteLine("6 - видалити заплановану поїздку");
