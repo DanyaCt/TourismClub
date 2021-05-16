@@ -19,7 +19,7 @@ namespace Travel
         public string ShowTravel(int i)
         {
             string str = Convert.ToString(i + 1) + ". Ім’я: " + name + "\n" + "Країна подорожі: " + countryname + "\n" + "Вид подорожі: " +  
-               sub.ShowSubject() + "\n" + "Обране агенство: " + sub.ShowAgency() + "\n" + "Обрана дата: " +  
+               sub.ShowSubject() + "\n" + "Обране агентство: " + sub.ShowAgency() + "\n" + "Обрана дата: " +  
                sub.ShowDate();
             return str;
         }

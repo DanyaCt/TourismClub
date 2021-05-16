@@ -76,7 +76,7 @@ namespace TourismClub
                         }
                         if (chooseSubject < 1 || chooseSubject > subjects.Count)
                             throw new ArgumentException("Введено неправильні дані");
-                        Console.WriteLine("Оберіть агенство");
+                        Console.WriteLine("Оберіть агентство");
                         ShowAgencies(agencies);
                         int chooseAgency;
                         if (!Int32.TryParse(Console.ReadLine(), out chooseAgency))
@@ -127,6 +127,8 @@ namespace TourismClub
                         }
                         if (year < 2021 || year > 2050)
                             throw new ArgumentException("Обрано не правильний рік");
+                        if(year == 2021 && month <= 5 && day < 18)
+                            throw new ArgumentException("Обрана дата застаріла!");
                         Console.WriteLine("Введіть своє Ім’я: ");
                         string name = Console.ReadLine();
                         if (name == "0")
@@ -159,9 +161,12 @@ namespace TourismClub
                             }
                             if (deletetravel < -1 || deletetravel > ListOfTravels.Count)
                                 throw new ArgumentException("Введено неправильні дані");
-                            if(deletetravel != 0)
+                            if (deletetravel != 0)
+                            {
                                 ListOfTravels.RemoveAt(deletetravel - 1);
-                            Console.WriteLine("Подорож видалена!");
+                                Console.WriteLine("Подорож видалена!");
+                            }
+
                         }
                         else 
                         {
@@ -187,7 +192,7 @@ namespace TourismClub
                         firstlettertoUpper(ref newsubject);
                         if (!subjects.Contains(newsubject) && temp != 0 && newCountry != "")
                             subjects.Add(newsubject);
-                        Console.WriteLine("Введіть нове агенство: ");
+                        Console.WriteLine("Введіть нове агентство: ");
                         string newagency = Console.ReadLine();
                         if (!Int32.TryParse(newagency, out temp))
                             temp = -1;
