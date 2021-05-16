@@ -6,7 +6,7 @@ namespace Travel
     public class Сountry
     {
         private string countryname;
-        protected Subject sub;
+        private Subject sub;
         private string name;
         //constructor with the name of the country, the name of the agency, the name of the topic, day, month, year and name for the trip
         public Сountry(string countryname, string name, string subject, string agency, int day, int month, int year)

@@ -161,6 +161,7 @@ namespace TourismClub
                                 throw new ArgumentException("Введено неправильні дані");
                             if(deletetravel != 0)
                                 ListOfTravels.RemoveAt(deletetravel - 1);
+                            Console.WriteLine("Подорож видалена!");
                         }
                         else 
                         {
@@ -176,18 +177,21 @@ namespace TourismClub
                         int temp;
                         if (!Int32.TryParse(newCountry, out temp))
                             temp = -1;
+                        firstlettertoUpper(ref newCountry);
                         if (!countries.Contains(newCountry) && temp != 0 && newCountry != "")
                             countries.Add(newCountry);
                         Console.WriteLine("Введіть нову тематику: ");
                         string newsubject = Console.ReadLine();
                         if (!Int32.TryParse(newsubject, out temp))
                             temp = -1;
+                        firstlettertoUpper(ref newsubject);
                         if (!subjects.Contains(newsubject) && temp != 0 && newCountry != "")
                             subjects.Add(newsubject);
                         Console.WriteLine("Введіть нове агенство: ");
                         string newagency = Console.ReadLine();
                         if (!Int32.TryParse(newagency, out temp))
                             temp = -1;
+                        firstlettertoUpper(ref newagency);
                         if (!agencies.Contains(newagency) && temp != 0 && newCountry != "")
                             agencies.Add(newagency);
                         Console.WriteLine("Виберіть наступну дію: ");
@@ -222,7 +226,7 @@ namespace TourismClub
             Console.WriteLine("4 - запланувати поїздку");
             Console.WriteLine("5 - переглянути заплановані поїздки");
             Console.WriteLine("6 - видалити заплановану поїздку");
-            Console.WriteLine("7 - додати країну, тематику, агенство до списку");
+            Console.WriteLine("7 - додати країну, тематику, агентство до списку");
             Console.WriteLine("8 - показати це меню");
         }
         static public void ShowCountries(List<string> countries)
@@ -266,6 +270,13 @@ namespace TourismClub
             {
                 Console.WriteLine(ListOfTravels[i].ShowName(i));
             }
+        }
+        static public void firstlettertoUpper(ref string str) {
+            char[] arr = str.ToCharArray();
+            string temp = arr[0].ToString().ToUpper();
+            arr[0] = Convert.ToChar(temp);
+            string str1 = new string(arr);
+            str = str1;
         }
     }
 }
